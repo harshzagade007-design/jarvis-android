@@ -3,14 +3,13 @@ nl -ba .github/workflows/android-apk.yml | sed -n '30,50p'
 
 name: Build JARVIS APK
 
-on:
+'on':
   workflow_dispatch:
   push:
-    branches: [ main ]
+    branches:
+      - main
     paths:
       - 'android/**'
-      - '.github/workflows/android-apk.yml'
-
 jobs:
   build:
     runs-on: ubuntu-latest
